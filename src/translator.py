@@ -55,7 +55,12 @@ class Translator:
             )
             
             response_time = time.time() - start_time
-            logger.info(f"Phi4 model call completed in {response_time:.3f} seconds")
+            
+            # Log with structured data
+            logger.info(
+                f"Phi4 model call completed in {response_time:.3f} seconds",
+                extra={'duration': response_time, 'model': self.model_name}
+            )
             
             if not response or 'response' not in response:
                 logger.warning("Model returned empty response")
@@ -74,7 +79,10 @@ class Translator:
             elif sql_query.startswith("```"):
                 sql_query = sql_query.replace("```", "").strip()
             
-            logger.info(f"Translation successful. Generated SQL query with {len(sql_query)} characters")
+            logger.info(
+                f"Translation successful. Generated SQL query with {len(sql_query)} characters",
+                extra={'duration': response_time, 'sql_length': len(sql_query), 'model': self.model_name}
+            )
             return TranslationResponse(
                 sql_query=sql_query,
                 success=True,
@@ -83,7 +91,10 @@ class Translator:
             
         except Exception as e:
             response_time = time.time() - start_time
-            logger.error(f"Translation failed after {response_time:.3f} seconds: {str(e)}")
+            logger.error(
+                f"Translation failed after {response_time:.3f} seconds: {str(e)}",
+                extra={'duration': response_time, 'model': self.model_name}
+            )
             return TranslationResponse(
                 sql_query="",
                 success=False,

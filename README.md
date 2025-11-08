@@ -55,6 +55,13 @@ python src/cli.py "count total orders"
 python src/cli.py "show customers with their order count"
 ```
 
+## Benchmarking
+The benchamrk will run 40 queries and record the statistics and timings into ./logs/benchmark_report_<timestanmp>.md
+```bash
+ ./scripts/run_benchmark.sh 
+```
+
+
 ## Predefined Schema
 
 The system uses a fixed e-commerce schema:
