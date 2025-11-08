@@ -173,7 +173,6 @@ config.local.yaml
 
 # Logs
 *.log
-logs/
 *.log.*
 
 # Temporary files
