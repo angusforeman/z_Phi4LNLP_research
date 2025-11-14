@@ -1,0 +1,338 @@
+{
+  "metadata": {
+    "timestamp": "2025-11-08T17:15:38.503730",
+    "total_queries": 40,
+    "successful": 40,
+    "failed": 0,
+    "success_rate": 100.0
+  },
+  "statistics": {
+    "total_time_seconds": 978.335,
+    "average_time_seconds": 24.458,
+    "average_success_time_seconds": 24.458,
+    "min_time_seconds": 12.127,
+    "max_time_seconds": 77.434
+  },
+  "results": [
+    {
+      "timestamp": "2025-11-08T17:00:17.549093",
+      "query": "show all customers",
+      "sql": "SELECT * FROM customers;",
+      "success": true,
+      "duration_seconds": 77.434,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:00:30.178843",
+      "query": "list all products",
+      "sql": "SELECT * FROM products;",
+      "success": true,
+      "duration_seconds": 12.127,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:00:44.066409",
+      "query": "display all orders",
+      "sql": "SELECT * FROM orders;",
+      "success": true,
+      "duration_seconds": 13.386,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:00:58.657252",
+      "query": "get all customer names",
+      "sql": "SELECT name FROM customers;",
+      "success": true,
+      "duration_seconds": 14.09,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:01:12.732929",
+      "query": "show me the products",
+      "sql": "SELECT * FROM products;",
+      "success": true,
+      "duration_seconds": 13.574,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:01:28.323720",
+      "query": "count all customers",
+      "sql": "SELECT COUNT(*) FROM customers;",
+      "success": true,
+      "duration_seconds": 15.09,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:01:43.954523",
+      "query": "how many orders are there",
+      "sql": "SELECT COUNT(*) FROM orders;",
+      "success": true,
+      "duration_seconds": 15.13,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:02:00.907609",
+      "query": "count total products",
+      "sql": "SELECT SUM(quantity) AS total_products FROM orders;",
+      "success": true,
+      "duration_seconds": 16.452,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:02:16.775394",
+      "query": "how many customers do we have",
+      "sql": "SELECT COUNT(*) FROM customers;",
+      "success": true,
+      "duration_seconds": 15.366,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:02:33.942824",
+      "query": "total number of orders",
+      "sql": "SELECT COUNT(*) AS total_number_of_orders FROM orders;",
+      "success": true,
+      "duration_seconds": 16.666,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:02:53.256409",
+      "query": "show customers with email containing gmail",
+      "sql": "SELECT * FROM customers WHERE email LIKE '%gmail%';",
+      "success": true,
+      "duration_seconds": 18.813,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:03:11.418520",
+      "query": "find products with price greater than 100",
+      "sql": "SELECT * FROM products WHERE price > 100;",
+      "success": true,
+      "duration_seconds": 17.661,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:03:30.690723",
+      "query": "get orders from customer id 5",
+      "sql": "SELECT * FROM orders WHERE customer_id = 5;",
+      "success": true,
+      "duration_seconds": 18.771,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:03:49.863251",
+      "query": "list products that are out of stock",
+      "sql": "SELECT name \nFROM products \nWHERE stock_quantity = 0;",
+      "success": true,
+      "duration_seconds": 18.671,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:04:06.892909",
+      "query": "show orders with quantity more than 10",
+      "sql": "SELECT * FROM orders WHERE quantity > 10;",
+      "success": true,
+      "duration_seconds": 16.528,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:04:23.977158",
+      "query": "list customers sorted by name",
+      "sql": "SELECT * FROM customers ORDER BY name;",
+      "success": true,
+      "duration_seconds": 16.583,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:04:41.359193",
+      "query": "show products ordered by price descending",
+      "sql": "SELECT name, price \nFROM products \nORDER BY price DESC;",
+      "success": true,
+      "duration_seconds": 16.881,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:05:00.598779",
+      "query": "display orders sorted by date",
+      "sql": "SELECT * FROM orders ORDER BY order_date;",
+      "success": true,
+      "duration_seconds": 18.738,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:05:17.291355",
+      "query": "get customers ordered by creation date",
+      "sql": "SELECT * FROM customers ORDER BY created_at;",
+      "success": true,
+      "duration_seconds": 16.191,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:05:35.524577",
+      "query": "show products from cheapest to most expensive",
+      "sql": "SELECT name, price \nFROM products \nORDER BY price ASC;",
+      "success": true,
+      "duration_seconds": 17.732,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:05:53.583970",
+      "query": "what is the average product price",
+      "sql": "SELECT AVG(price) AS average_product_price FROM products;",
+      "success": true,
+      "duration_seconds": 17.558,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:06:10.935947",
+      "query": "sum of all order prices",
+      "sql": "SELECT SUM(total_price) AS total_order_prices FROM orders;",
+      "success": true,
+      "duration_seconds": 16.851,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:06:27.381584",
+      "query": "find the maximum price in products",
+      "sql": "SELECT MAX(price) FROM products;",
+      "success": true,
+      "duration_seconds": 15.944,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:06:54.036565",
+      "query": "minimum quantity in orders",
+      "sql": "SELECT MIN(quantity) AS min_quantity FROM orders;",
+      "success": true,
+      "duration_seconds": 26.153,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:07:15.495444",
+      "query": "total revenue from all orders",
+      "sql": "SELECT SUM(total_price) AS total_revenue FROM orders;",
+      "success": true,
+      "duration_seconds": 20.957,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:07:56.345129",
+      "query": "show customer names with their orders",
+      "sql": "SELECT c.name AS customer_name, o.product_name AS order_product, o.quantity, o.order_date, o.total_price\nFROM customers c\nJOIN orders o ON c.id = o.customer_id;",
+      "success": true,
+      "duration_seconds": 40.349,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:08:46.014188",
+      "query": "list all orders with customer information",
+      "sql": "SELECT \n    o.id AS order_id,\n    c.id AS customer_id,\n    c.name AS customer_name,\n    c.email AS customer_email,\n    o.product_name,\n    o.quantity,\n    o.order_date,\n    o.total_price\nFROM \n    orders o\nJOIN \n    customers c ON o.customer_id = c.id;",
+      "success": true,
+      "duration_seconds": 49.167,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:09:06.423420",
+      "query": "get customer email addresses for each order",
+      "sql": "SELECT c.email \nFROM customers c \nJOIN orders o ON c.id = o.customer_id;",
+      "success": true,
+      "duration_seconds": 19.908,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:09:29.624017",
+      "query": "show which customers placed orders",
+      "sql": "SELECT DISTINCT c.name, c.email \nFROM customers c\nJOIN orders o ON c.id = o.customer_id;",
+      "success": true,
+      "duration_seconds": 22.7,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:10:02.131760",
+      "query": "display orders along with customer names",
+      "sql": "SELECT o.id AS order_id, c.name AS customer_name, o.product_name, o.quantity, o.order_date, o.total_price \nFROM orders o \nJOIN customers c ON o.customer_id = c.id;",
+      "success": true,
+      "duration_seconds": 32.006,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:10:26.369290",
+      "query": "count orders per customer",
+      "sql": "SELECT c.name, COUNT(o.id) AS order_count\nFROM customers c\nJOIN orders o ON c.id = o.customer_id\nGROUP BY c.name;",
+      "success": true,
+      "duration_seconds": 23.736,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:10:52.979646",
+      "query": "total quantity ordered by each customer",
+      "sql": "SELECT c.name, SUM(o.quantity) AS total_quantity_ordered\nFROM customers c\nJOIN orders o ON c.id = o.customer_id\nGROUP BY c.name;",
+      "success": true,
+      "duration_seconds": 26.109,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:11:18.926545",
+      "query": "average order price per customer",
+      "sql": "SELECT c.name, AVG(o.total_price) AS average_order_price\nFROM customers c\nJOIN orders o ON c.id = o.customer_id\nGROUP BY c.name;",
+      "success": true,
+      "duration_seconds": 25.445,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:12:14.910181",
+      "query": "number of products per price range",
+      "sql": "SELECT \n    CASE \n        WHEN p.price BETWEEN 0 AND 99.99 THEN '0-99.99'\n        WHEN p.price BETWEEN 100 AND 199.99 THEN '100-199.99'\n        WHEN p.price BETWEEN 200 AND 299.99 THEN '200-299.99'\n        ELSE '300+' \n    END AS price_range,\n    COUNT(p.id) AS product_count\nFROM \n    products p\nGROUP BY \n    price_range;",
+      "success": true,
+      "duration_seconds": 55.483,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:12:42.250280",
+      "query": "sum of order totals grouped by customer",
+      "sql": "SELECT c.name, SUM(o.total_price) AS total_spent\nFROM customers c\nJOIN orders o ON c.id = o.customer_id\nGROUP BY c.name;",
+      "success": true,
+      "duration_seconds": 26.839,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:13:09.366661",
+      "query": "find customers who ordered more than 5 items",
+      "sql": "SELECT DISTINCT c.id, c.name, c.email \nFROM customers c\nJOIN orders o ON c.id = o.customer_id\nWHERE o.quantity > 5;",
+      "success": true,
+      "duration_seconds": 26.616,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:13:51.576635",
+      "query": "show top 10 customers by total spending",
+      "sql": "SELECT c.id, c.name, SUM(o.total_price) AS total_spending\nFROM customers c\nJOIN orders o ON c.id = o.customer_id\nGROUP BY c.id, c.name\nORDER BY total_spending DESC\nLIMIT 10;",
+      "success": true,
+      "duration_seconds": 41.709,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:14:15.767527",
+      "query": "list products never ordered",
+      "sql": "SELECT p.name \nFROM products p\nLEFT JOIN orders o ON p.name = o.product_name\nWHERE o.id IS NULL;",
+      "success": true,
+      "duration_seconds": 23.689,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:14:48.106119",
+      "query": "get customers who placed orders in the last month",
+      "sql": "SELECT DISTINCT c.id, c.name, c.email \nFROM customers c\nJOIN orders o ON c.id = o.customer_id\nWHERE o.order_date >= DATE_SUB(CURDATE(), INTERVAL 1 MONTH);",
+      "success": true,
+      "duration_seconds": 31.837,
+      "error": null
+    },
+    {
+      "timestamp": "2025-11-08T17:15:38.002306",
+      "query": "find the most expensive order with customer details",
+      "sql": "SELECT c.id, c.name, c.email, o.id AS order_id, o.product_name, o.quantity, o.total_price, o.order_date\nFROM customers c\nJOIN orders o ON c.id = o.customer_id\nORDER BY o.total_price DESC\nLIMIT 1;",
+      "success": true,
+      "duration_seconds": 49.395,
+      "error": null
+    }
+  ]
+}
